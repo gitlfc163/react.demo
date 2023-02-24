@@ -7,6 +7,9 @@ import './index.css'
 function Index() {
   const [count, setCount] = useState(0)
 
+  const name = 'Josh Perez';
+  const element = <h3>Hello, {name}</h3>;
+
   const testRequest = async () => {
     try {
       const data = await request(`${window.globalConfig?.appServer}`);
@@ -34,6 +37,8 @@ function Index() {
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>
+
+        {element}
         <p>
           <a
             className="App-link"
