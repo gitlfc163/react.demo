@@ -3,6 +3,7 @@ import HelloWorld from '@/components/HelloWorld';
 import logo from '@/assets/logo.svg'
 import request from '@/utils/request';
 import './index.css'
+import ShoppingList from '@/components/ShoppingList';
 
 function Index() {
   const [count, setCount] = useState(0)
@@ -25,8 +26,9 @@ function Index() {
 
   return (
     <div className="App">
-      <HelloWorld />
       <header className="App-header">
+      {/* <HelloWorld /> */}
+      <ShoppingList name="Mark" />
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>

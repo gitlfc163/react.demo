@@ -19,7 +19,7 @@ const Index: React.FC<{}> = () => {
         <Button type="primary" style={{ marginRight: '8px' }} onClick={handleForward}>前进</Button>
         <Button type="primary" style={{ marginRight: '8px' }} onClick={handleRefresh}>刷新</Button>
         {/* 跳转路由 */}
-        <Button type="primary" style={{ marginRight: '8px' }} onClick={() => navigate('/article/1')}>params</Button>
+        <Button type="primary" style={{ marginRight: '8px' }} onClick={() => navigate(`/article/1`)}>params</Button>
         <Button type="primary" style={{ marginRight: '8px' }} onClick={() => navigate('/article?id=1')}>search</Button>
         <Button type="primary" style={{ marginRight: '8px' }} onClick={() => navigate('/article', { state: { id: 1 } })}>state</Button>
     </div>;

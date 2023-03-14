@@ -30,14 +30,14 @@ function GlobalHeader() {
 function GlobalContent() {
     return <Layout.Content className={styles.main}>
         <div className={styles.mainContainer} >
-            {/* outlet */}
+            {/* 子路由组件 */}
             <Outlet />
         </div>
     </Layout.Content>;
 }
 
 function GlobalFooter() {
-    return <Layout.Footer className={styles.footer}>用 vite 创建 react18 项目 @带只拖鞋去流浪</Layout.Footer>
+    return <Layout.Footer className={styles.footer}>用 vite 创建 react18 项目</Layout.Footer>
 
 }
 

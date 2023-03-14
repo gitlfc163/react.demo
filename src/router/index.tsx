@@ -4,6 +4,10 @@ import routes, { routeType } from './routes';
 import { Spin } from 'antd';
 import _ from 'lodash';
 
+/***
+ * @description useRoutes 配置路由
+ * @param {routeType} routes 路由配置
+ */
 export default function Routes() {
     const element = useRoutes(renderRoutes(routes));
     return element;
