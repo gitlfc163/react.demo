@@ -1,11 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+import gzipPlugin from 'rollup-plugin-gzip'
+import legacy from '@vitejs/plugin-legacy'
+
 import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    legacy({
+      targets: ['> 0.25%', 'last 2 versions and not dead'],
+    }),
+  ],
   server: {
     host: true,
     //port: 8003,
@@ -29,5 +37,11 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+  build: {
+    rollupOptions: {
+      plugins: [gzipPlugin()]
+    }
   }
 })
+
