@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import HelloWorld from '@/components/HelloWorld';
+//import HelloWorld from '@/components/HelloWorld';
 import logo from '@/assets/logo.svg'
 import request from '@/utils/request';
 import './index.css'
 import ShoppingList from '@/components/ShoppingList';
+import React from 'react';
 
 function Index() {
   const [count, setCount] = useState(0)

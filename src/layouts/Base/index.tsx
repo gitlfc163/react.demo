@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 import styles from './index.module.less';
+import React from 'react';
 
 function GlobalHeader() {
     const navigate = useNavigate();
@@ -21,6 +22,16 @@ function GlobalHeader() {
                         key: "about",
                         label: "关于",
                         onClick: () => navigate('/about')
+                    },
+                    {
+                        key: "x6custom",
+                        label: "X6demo1",
+                        onClick: () => navigate('/x6custom')
+                    },
+                    {
+                        key: "graphdemo",
+                        label: "画布大小",
+                        onClick: () => navigate('/graphdemo')
                     },
                 ]
             } />

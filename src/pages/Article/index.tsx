@@ -4,6 +4,7 @@ import { getList } from "@/store/modules/article";
 import _ from 'lodash';
 import { useEffect } from "react";
 import type { AnyAction } from "@reduxjs/toolkit";
+import React from 'react';
 
 export default function Index() {
     // params

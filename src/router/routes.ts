@@ -46,6 +46,20 @@ const routes: Array<routeType> = [
                     title: "文章2",
                 }
             },
+            {
+                path: '/x6custom',
+                component: () => import('@/pages/x6demo/X6Custom'),
+                meta: {
+                    title: "X6demo1",
+                }
+            },
+            {
+                path: '/graphdemo',
+                component: () => import('@/pages/x6demo/GraphDemo'),
+                meta: {
+                    title: "GraphDemo",
+                }
+            },
         ]
     },
     {
