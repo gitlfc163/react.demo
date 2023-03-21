@@ -1,40 +1,17 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Layout, Menu } from 'antd';
 import styles from './index.module.less';
 import React from 'react';
+import GetMenuData from "../MenuData"
 
 function GlobalHeader() {
-    const navigate = useNavigate();
-
+   
     return <Layout.Header className={styles.header}>
         <div className={styles.logo} />
         <Menu
             mode="horizontal"
             theme="dark"
-            items={
-                [
-                    {
-                        key: "home",
-                        label: "首页",
-                        onClick: () => navigate('/home')
-                    },
-                    {
-                        key: "about",
-                        label: "关于",
-                        onClick: () => navigate('/about')
-                    },
-                    {
-                        key: "x6custom",
-                        label: "X6demo1",
-                        onClick: () => navigate('/x6custom')
-                    },
-                    {
-                        key: "graphdemo",
-                        label: "画布大小",
-                        onClick: () => navigate('/graphdemo')
-                    },
-                ]
-            } />
+            items={GetMenuData()} />
     </Layout.Header>
 }
 

@@ -57,7 +57,21 @@ const routes: Array<routeType> = [
                 path: '/graphdemo',
                 component: () => import('@/pages/x6demo/GraphDemo'),
                 meta: {
-                    title: "GraphDemo",
+                    title: "画布Demo",
+                }
+            },
+            {
+                path: '/nodedemo',
+                component: () => import('@/pages/x6demo/NodeDemo'),
+                meta: {
+                    title: "节点Demo",
+                }
+            },
+            {
+                path: '/edgedemo',
+                component: () => import('@/pages/x6demo/EdgeDemo'),
+                meta: {
+                    title: "边Demo",
                 }
             },
         ]

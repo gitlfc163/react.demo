@@ -1,0 +1,42 @@
+
+import { useNavigate } from "react-router-dom";
+
+//导航菜单
+function GetMenuData() {
+    const navigate = useNavigate();
+    const menuData = [
+        {
+            key: "home",
+            label: "首页",
+            onClick: () => navigate('/home')
+        },
+        {
+            key: "about",
+            label: "关于",
+            onClick: () => navigate('/about')
+        },
+        {
+            key: "x6custom",
+            label: "X6demo1",
+            onClick: () => navigate('/x6custom')
+        },
+        {
+            key: "graphdemo",
+            label: "画布Demo",
+            onClick: () => navigate('/graphdemo')
+        },
+        {
+            key: "nodedemo",
+            label: "节点Demo",
+            onClick: () => navigate('/nodedemo')
+        }, {
+            key: "edgedemo",
+            label: "边Demo",
+            onClick: () => navigate('/edgedemo')
+        },
+    ];
+    return menuData;
+}
+
+
+export default GetMenuData;
