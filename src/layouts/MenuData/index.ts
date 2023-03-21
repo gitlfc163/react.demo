@@ -33,6 +33,10 @@ function GetMenuData() {
             key: "edgedemo",
             label: "边Demo",
             onClick: () => navigate('/edgedemo')
+        }, {
+            key: "portsdemo",
+            label: "连接桩",
+            onClick: () => navigate('/portsdemo')
         },
     ];
     return menuData;

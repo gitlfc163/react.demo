@@ -74,6 +74,13 @@ const routes: Array<routeType> = [
                     title: "边Demo",
                 }
             },
+            {
+                path: '/portsdemo',
+                component: () => import('@/pages/x6demo/PortsDemo'),
+                meta: {
+                    title: "连接桩Demo",
+                }
+            },
         ]
     },
     {
