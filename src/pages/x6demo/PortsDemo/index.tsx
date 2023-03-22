@@ -1,9 +1,11 @@
+//连接桩
+
 import React from "react";
 import { Graph } from "@antv/x6";
 import "./index.less";
-
+//自定义节点
 Graph.registerNode(
-  "custom-node-width-port",
+  "custom-node-width-port", //自定义节点的名字
   {
     inherit: "rect",
     width: 100,

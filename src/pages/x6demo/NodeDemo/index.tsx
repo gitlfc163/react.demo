@@ -1,41 +1,41 @@
-import React from 'react'
-import { Graph, Color } from '@antv/x6'
-import { Button } from 'antd'
-import './index.less'
-import data from './data'
+import React from "react";
+import { Graph, Color } from "@antv/x6";
+import { Button } from "antd";
+import "./index.less";
+import data from "./data";
 
-
+//自定义节点
 Graph.registerNode(
-  'custom-node',
+  "custom-node", //自定义节点的名字
   {
-    inherit: 'rect', // 继承于 rect 节点
+    inherit: "rect", // 继承于 rect 节点
     width: 100,
     height: 40,
     markup: [
       {
-        tagName: 'rect', // 标签名称
-        selector: 'body', // 选择器
+        tagName: "rect", // 标签名称
+        selector: "body", // 选择器
       },
       {
-        tagName: 'image',
-        selector: 'img',
+        tagName: "image",
+        selector: "img",
       },
       {
-        tagName: 'text',
-        selector: 'label',
+        tagName: "text",
+        selector: "label",
       },
     ],
     attrs: {
       body: {
-        stroke: '#8f8f8f',
+        stroke: "#8f8f8f",
         strokeWidth: 1,
-        fill: '#fff',
+        fill: "#fff",
         rx: 6,
         ry: 6,
       },
       img: {
-        'xlink:href':
-          'https://gw.alipayobjects.com/zos/antfincdn/FLrTNDvlna/antv.png',
+        "xlink:href":
+          "https://gw.alipayobjects.com/zos/antfincdn/FLrTNDvlna/antv.png",
         width: 16,
         height: 16,
         x: 12,
@@ -43,86 +43,86 @@ Graph.registerNode(
       },
     },
   },
-  true,
-)
+  true
+);
 
 const commands = [
   {
-    key: 'prop',
-    label: 'prop',
+    key: "prop",
+    label: "prop",
   },
   {
-    key: 'attr',
-    label: 'attr',
+    key: "attr",
+    label: "attr",
   },
-]
+];
 
 export default class Example extends React.Component {
-  private container!: HTMLDivElement
-  private graph!: Graph
+  private container!: HTMLDivElement;
+  private graph!: Graph;
 
   componentDidMount() {
     const graph = new Graph({
       container: this.container,
       background: {
-        color: '#F2F7FA',
+        color: "#F2F7FA",
       },
-    })
-    graph.fromJSON(data)
+    });
+    graph.fromJSON(data);
 
     const source = graph.addNode({
-      shape: 'custom-node',
+      shape: "custom-node",
       x: 40,
       y: 40,
-      label: 'hello',
-    })
+      label: "hello",
+    });
 
     const target = graph.addNode({
-      shape: 'custom-node',
+      shape: "custom-node",
       x: 160,
       y: 180,
-      label: 'world',
-    })
+      label: "world",
+    });
 
     graph.addEdge({
       source,
       target,
       attrs: {
         line: {
-          stroke: '#8f8f8f',
+          stroke: "#8f8f8f",
           strokeWidth: 1,
         },
       },
-    })
+    });
 
-    graph.centerContent()
-    this.graph = graph
+    graph.centerContent();
+    this.graph = graph;
   }
 
   change = (command: string) => {
-    const nodes = this.graph.getNodes()
+    const nodes = this.graph.getNodes();
     switch (command) {
-      case 'prop':
+      case "prop":
         nodes.forEach((node) => {
-          const width = 100 + Math.floor(Math.random() * 50)
-          const height = 40 + Math.floor(Math.random() * 10)
-          node.prop('size', { width, height })
-        })
-        break
-      case 'attr':
+          const width = 100 + Math.floor(Math.random() * 50);
+          const height = 40 + Math.floor(Math.random() * 10);
+          node.prop("size", { width, height });
+        });
+        break;
+      case "attr":
         nodes.forEach((node) => {
-          const color = Color.random().toHex()
-          node.attr('body/fill', color)
-        })
-        break
+          const color = Color.random().toHex();
+          node.attr("body/fill", color);
+        });
+        break;
       default:
-        break
+        break;
     }
-  }
+  };
 
   refContainer = (container: HTMLDivElement) => {
-    this.container = container
-  }
+    this.container = container;
+  };
 
   render() {
     return (
@@ -138,6 +138,6 @@ export default class Example extends React.Component {
         </div>
         <div className="app-content" ref={this.refContainer} />
       </div>
-    )
+    );
   }
 }

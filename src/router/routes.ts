@@ -81,6 +81,20 @@ const routes: Array<routeType> = [
                     title: "连接桩Demo",
                 }
             },
+            {
+                path: '/connectingdemo',
+                component: () => import('@/pages/x6demo/ConnectingDemo'),
+                meta: {
+                    title: "连线交互",
+                }
+            },
+            {
+                path: '/ebeddingdemo',
+                component: () => import('@/pages/x6demo/EmbeddingDemo'),
+                meta: {
+                    title: "组合示例",
+                }
+            },
         ]
     },
     {

@@ -1,3 +1,5 @@
+//边示例
+
 import React, { Component } from "react";
 
 import { Color, Graph } from "@antv/x6";

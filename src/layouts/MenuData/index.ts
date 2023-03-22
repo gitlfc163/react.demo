@@ -37,6 +37,14 @@ function GetMenuData() {
             key: "portsdemo",
             label: "连接桩",
             onClick: () => navigate('/portsdemo')
+        }, {
+            key: "connectingdemo",
+            label: "连线交互",
+            onClick: () => navigate('/connectingdemo')
+        }, {
+            key: "ebeddingdemo",
+            label: "组合示例",
+            onClick: () => navigate('/ebeddingdemo')
         },
     ];
     return menuData;
