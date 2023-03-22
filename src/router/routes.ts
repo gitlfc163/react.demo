@@ -95,6 +95,13 @@ const routes: Array<routeType> = [
                     title: "组合示例",
                 }
             },
+            {
+                path: '/customevent',
+                component: () => import('@/pages/x6demo/CustomEvent'),
+                meta: {
+                    title: "自定义事件",
+                }
+            },
         ]
     },
     {

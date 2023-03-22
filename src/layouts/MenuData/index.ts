@@ -45,6 +45,10 @@ function GetMenuData() {
             key: "ebeddingdemo",
             label: "组合示例",
             onClick: () => navigate('/ebeddingdemo')
+        }, {
+            key: "customevent",
+            label: "自定义事件",
+            onClick: () => navigate('/customevent')
         },
     ];
     return menuData;
