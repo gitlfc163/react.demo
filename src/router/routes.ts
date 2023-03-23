@@ -102,6 +102,40 @@ const routes: Array<routeType> = [
                     title: "自定义事件",
                 }
             },
+            {
+                path: '/toolsdemo1',
+                component: () => import('@/pages/x6demo/ToolsDemo1'),
+                meta: {
+                    title: "小工具一",
+                }
+            },
+            {
+                path: '/toolsdemo2',
+                component: () => import('@/pages/x6demo/ToolsDemo2'),
+                meta: {
+                    title: "小工具二",
+                }
+            },
+            {
+                path: '/customgroup1',
+                component: () => import('@/pages/x6demo/CustomGroup1'),
+                meta: {
+                    title: "限子节点移动",
+                }
+            },
+            {
+                path: '/customgroup2',
+                component: () => import('@/pages/x6demo/CustomGroup2'),
+                meta: {
+                    title: "自动扩展父节点",
+                }
+            }, {
+                path: '/customgroup3',
+                component: () => import('@/pages/x6demo/CustomGroup3'),
+                meta: {
+                    title: "展开与折叠父节点",
+                }
+            },
         ]
     },
     {

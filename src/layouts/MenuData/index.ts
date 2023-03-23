@@ -49,7 +49,29 @@ function GetMenuData() {
             key: "customevent",
             label: "自定义事件",
             onClick: () => navigate('/customevent')
+        }, {
+            key: "toolsdemo1",
+            label: "小工具一",
+            onClick: () => navigate('/toolsdemo1')
+        }, {
+            key: "toolsdemo2",
+            label: "小工具二",
+            onClick: () => navigate('/toolsdemo2')
         },
+        {
+            key: "customgroup1",
+            label: "群组一",
+            onClick: () => navigate('/customgroup1')
+        }, {
+            key: "customgroup2",
+            label: "群组二",
+            onClick: () => navigate('/customgroup2')
+        }, {
+            key: "customgroup3",
+            label: "群组三",
+            onClick: () => navigate('/customgroup3')
+        },
+
     ];
     return menuData;
 }
