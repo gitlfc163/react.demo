@@ -1,3 +1,5 @@
+//限制子节点的移动
+
 import React from "react";
 import { Graph } from "@antv/x6";
 import "./index.less";
@@ -30,6 +32,7 @@ export default class Example extends React.Component {
       background: {
         color: "#F2F7FA",
       },
+      //通过 translating.restrict 选项,限制子节点的移动
       translating: {
         restrict(view) {
           if (view) {
@@ -45,7 +48,7 @@ export default class Example extends React.Component {
         },
       },
     });
-
+    //子节点
     const child = graph.addNode({
       shape: "custom-group-node",
       x: 100,
@@ -53,7 +56,7 @@ export default class Example extends React.Component {
       label: "Child",
       zIndex: 2,
     });
-
+    //父节点
     const parent = graph.addNode({
       shape: "custom-group-node",
       x: 40,
@@ -63,7 +66,7 @@ export default class Example extends React.Component {
       zIndex: 1,
       label: "Parent\n(try to move me)",
     });
-
+    //添加子节点到父节点
     parent.addChild(child);
   }
 

@@ -1,3 +1,6 @@
+/**
+ * @description 展开与折叠父节点
+ */
 import React from "react";
 import { Graph } from "@antv/x6";
 import { Group } from "./shape";

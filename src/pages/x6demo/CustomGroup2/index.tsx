@@ -1,3 +1,7 @@
+/**
+ * @description 自动扩展父节点
+ * @description 通过监听 node:change:position 事件，当节点移动时自动扩展/收缩父节点的大小，使父节点完全包围住子节点。
+ */
 import React from "react";
 import { Graph, Dom } from "@antv/x6";
 import { Settings, State } from "./settings";
@@ -87,7 +91,7 @@ export default class Example extends React.Component {
         node.prop("originSize", node.getSize());
       }
     });
-
+    //通过监听 node:change:position 事件，当节点移动时自动扩展/收缩父节点的大小，使父节点完全包围住子节点
     graph.on("node:change:position", ({ node, options }) => {
       if (options.skipParentHandler || ctrlPressed) {
         return;
