@@ -23,7 +23,7 @@ Graph.registerNode(
   true
 );
 
-export default class Example extends React.Component {
+export default class CustomGroup1 extends React.Component {
   private container!: HTMLDivElement;
 
   componentDidMount() {

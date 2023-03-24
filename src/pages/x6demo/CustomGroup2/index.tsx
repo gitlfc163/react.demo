@@ -25,7 +25,7 @@ Graph.registerNode(
   },
   true
 );
-export default class Example extends React.Component {
+export default class CustomGroup2 extends React.Component {
   private container!: HTMLDivElement;
   private embedPadding = 20;
 

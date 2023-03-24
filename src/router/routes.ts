@@ -135,6 +135,18 @@ const routes: Array<routeType> = [
                 meta: {
                     title: "展开与折叠父节点",
                 }
+            }, {
+                path: '/s2basedemo1',
+                component: () => import('@/pages/s2demo/BaseDemo1'),
+                meta: {
+                    title: "S2示例一",
+                }
+            }, {
+                path: '/s2basedemo2',
+                component: () => import('@/pages/s2demo/BaseDemo2'),
+                meta: {
+                    title: "S2示例二",
+                }
             },
         ]
     },

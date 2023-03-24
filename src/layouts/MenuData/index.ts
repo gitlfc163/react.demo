@@ -70,6 +70,14 @@ function GetMenuData() {
             key: "customgroup3",
             label: "群组三",
             onClick: () => navigate('/customgroup3')
+        }, {
+            key: "s2basedemo1",
+            label: "S2示例一",
+            onClick: () => navigate('/s2basedemo1')
+        }, {
+            key: "s2basedemo2",
+            label: "S2示例二",
+            onClick: () => navigate('/s2basedemo2')
         },
 
     ];
