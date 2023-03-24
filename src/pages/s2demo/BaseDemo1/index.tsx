@@ -7,8 +7,8 @@ import "./index.less";
 import s2DataConfig from "./data";
 
 const s2Options = {
-  width: 1600,
-  height: 680,
+  width: 1200,
+  height: 480,
 };
 
 //数据

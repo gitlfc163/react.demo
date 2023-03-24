@@ -1,4 +1,5 @@
 const s2DataConfig = {
+  hdAdapter: true,
   fields: {
     rows: ["province", "city"],
     columns: ["type"],

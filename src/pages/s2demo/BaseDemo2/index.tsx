@@ -26,8 +26,9 @@ const minWeight = min(weights);
 const weightSpan = maxWeight - minWeight;
 
 const s2Options = {
-  width: 1600,
+  width: 1200,
   height: 680,
+  hdAdapter: true,
   conditions: {
     text: [
       {
