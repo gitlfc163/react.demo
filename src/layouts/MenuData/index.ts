@@ -102,11 +102,11 @@ function GetMenuData() {
             children: [
                 {
                     key: "s2basedemo1",
-                    label: "S2示例一",
+                    label: "S2透视表",
                     onClick: () => navigate('/s2basedemo1')
                 }, {
                     key: "s2basedemo2",
-                    label: "S2示例二",
+                    label: "S2明细表",
                     onClick: () => navigate('/s2basedemo2')
                 },
             ]

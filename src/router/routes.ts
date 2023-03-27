@@ -139,13 +139,13 @@ const routes: Array<routeType> = [
                 path: '/s2basedemo1',
                 component: () => import('@/pages/s2demo/BaseDemo1'),
                 meta: {
-                    title: "S2示例一",
+                    title: "S2透视表",
                 }
             }, {
                 path: '/s2basedemo2',
                 component: () => import('@/pages/s2demo/BaseDemo2'),
                 meta: {
-                    title: "S2示例二",
+                    title: "S2明细表",
                 }
             },
         ]

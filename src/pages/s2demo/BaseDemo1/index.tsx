@@ -1,4 +1,4 @@
-//S2基本示例
+//S2基本示例-透视表
 import { SheetComponent } from "@antv/s2-react";
 import "@antv/s2-react/dist/style.min.css";
 import React from "react";
